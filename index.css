@@ -6,8 +6,18 @@ html {
   scroll-behavior: smooth;
 }
 body {
+  margin: 0 auto;
   background-color: var(--background-color);
 }
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,7 +29,8 @@ body {
   margin: 0 auto;
   min-height: 100vh;
   width: 100%;
-  max-width: 100%;
+  max-width: 789px;
+  min-width: 50px;
   background-color: #f1f1f1;
   display: flex;
   flex-direction: column;
@@ -80,7 +91,7 @@ body {
 
 .menu {
   position: absolute;
-  visibility: none;
+  visibility: hidden;
   background-color: #ad4844;
   opacity: 0;
   left: 15px;
@@ -88,9 +99,7 @@ body {
   top: 50px;
   z-index: 600;
   transition: 0.4s ease-in-out;
-  transition:
-    opacity 0.3s ease-in-out,
-    visibility 0.4s;
+  transition: opacity 0.3s ease-in-out, visibility 0.4s;
 }
 
 .menu--open {
@@ -117,7 +126,7 @@ body {
   font-weight: 450;
 }
 .overlay {
-  visibility: none;
+  visibility: hidden;
   position: absolute;
   background: rgba(255, 255, 255, 0.5);
   top: 0;
@@ -129,9 +138,7 @@ body {
   padding: 0;
   pointer-events: none;
   z-index: 200;
-  transition:
-    opacity 0.4s,
-    visibility 0.4s;
+  transition: opacity 0.4s, visibility 0.4s;
 }
 .overlay--visible {
   display: block;
@@ -158,17 +165,6 @@ body {
     height: 368.48px;
     width: 100%;
     background-size: contain;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    background: url("./assets/effect.png") no-repeat;
-    background-size: contain;
-    height: 162px;
-    width: 63px;
-    top: 510px;
-    left: -15px;
   }
 
   & .hero__welcome-text {
@@ -199,6 +195,8 @@ body {
 .main {
   margin: 0 auto;
   margin-top: 70px;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -213,25 +211,6 @@ body {
     background: linear-gradient(to right, #111111, #b1b1b1, #696969, #b1b1b1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 45px;
-      height: 1px;
-      background-color: #111111;
-      width: 140px;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      width: 45px;
-      height: 116px;
-      background: url("./assets/Vector_section2_1.svg");
-      right: -20px;
-      top: -120px;
-      transform: rotate(180deg);
-    }
   }
   & h4:nth-of-type(2) {
     display: flex;
@@ -511,6 +490,8 @@ body {
       text-align: center;
     }
     .ingredients__benefits-list {
+      width: 100%;
+      max-width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
