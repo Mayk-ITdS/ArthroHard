@@ -72,7 +72,6 @@ body {
   border: none;
   transition: box-shadow 0.3s ease-in-out;
   cursor: pointer;
-  position: relative;
   z-index: 300;
 }
 
@@ -159,11 +158,23 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
+  &::after {
+    content: "";
+    display: flex;
+    position: absolute;
+    height: 162px;
+    width: 63px;
+    left: 0;
+    top: 22%;
+    background: url("./assets/vector-wygoda.svg") no-repeat center;
+    background-size: contain;
+    transform: rotate(15deg) translateX(-20%);
+  }
   & .hero__image {
     background: url("./assets/header-product-photo.png") no-repeat center;
     height: 368.48px;
     width: 100%;
+    margin-top: 30px;
     background-size: contain;
   }
 
@@ -184,10 +195,12 @@ body {
       font-weight: 450;
       text-align: center;
     }
-    p {
+
+    .hero__text-small {
       font-size: 13px;
       font-weight: 400;
       text-align: center;
+      position: relative;
     }
   }
 }
@@ -201,88 +214,137 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
-  & h4:nth-of-type(1) {
+  &::before {
+    content: "";
     display: flex;
-    justify-content: center;
-    text-align: center;
-    font-size: 20px;
-    position: relative;
-    background: linear-gradient(to right, #111111, #b1b1b1, #696969, #b1b1b1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    position: absolute;
+    height: 162px;
+    width: 63px;
+    right: 0;
+    top: 25%;
+    background: url("./assets/Vector-wygoda-right.svg") no-repeat center;
+    background-size: contain;
+    transform: translateX(45%) rotate(-90deg);
   }
-  & h4:nth-of-type(2) {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-top: 90px;
-    font-size: 20px;
-    font-weight: 450;
-    position: relative;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 70px;
-      height: 1px;
-      background-color: #111111;
-      width: 140px;
-    }
+}
+& h4:nth-of-type(1) {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  background: linear-gradient(to right, #111111, #b1b1b1, #696969, #b1b1b1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+& h4:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 90px;
+  font-size: 20px;
+  font-weight: 450;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 70px;
+    height: 1px;
+    background-color: #111111;
+    width: 140px;
   }
+}
 
-  .main__plant {
-    display: flex;
-    margin: 0 auto;
+.main__plant {
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+
+  .article-plant-description {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .plant__img {
+    height: 290px;
+    min-height: 290px;
+    background: url("./assets/photo.png") no-repeat center;
+    background-size: contain;
+  }
+  .underline {
     width: 100%;
-    flex-direction: column;
-    gap: 30px;
-    margin-top: 50px;
-
-    .article-plant-description {
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      font-weight: 400;
-    }
-    .plant__img {
-      height: 290px;
-      min-height: 290px;
-      background: url("./assets/photo.png") no-repeat center;
-      background-size: contain;
-    }
-    .underline {
-      width: 100%;
-      height: 1px;
-      background-color: #111111;
-    }
+    height: 1px;
+    background-color: #111111;
   }
+}
+
+.underline__head {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  height: 1px;
+  width: 140px;
+  background-color: #111111;
 }
 .main__comfort {
   margin: 0 auto;
   margin-top: 60px;
   text-align: center;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 137px;
+    width: 54px;
+    background: url("./assets/vector-wygoda.svg") no-repeat center;
+    background-size: contain;
+    left: 0;
+    top: 54%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: url("./assets/Vector-wygoda-right.svg") no-repeat center;
+    background-size: contain;
+    height: 137px;
+    width: 54px;
+    top: 53.5%;
+    right: 0;
+  }
   .main__comfort-head {
+    margin: 0 auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     .comfort-text {
+      margin: 0 auto;
       display: flex;
       flex-direction: column;
       text-align: center;
       font-size: 20px;
       font-weight: 450;
       color: #111111;
-    }
-    .underline__head {
-      margin-top: 20px;
-      margin-bottom: 30px;
-      height: 1px;
-      width: 140px;
-      background-color: #111111;
+      .underline__head {
+        margin: 0 auto;
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        height: 1px;
+        width: 140px;
+        background-color: #111111;
+      }
     }
   }
   & .circle__container {
@@ -294,6 +356,7 @@ body {
     gap: 20px;
 
     & .circle__container-circle {
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -321,10 +384,13 @@ body {
     margin-bottom: 70px;
     width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 20px;
     .comfort__photo1 {
       display: block;
       height: 290px;
+      width: 100%;
       width: 135px;
       background: url("./assets/Pexels-Photo-by-Thirdman-1.jpg") no-repeat;
       background-size: contain;
@@ -332,7 +398,8 @@ body {
     .comfort__photo2 {
       display: block;
       height: 290px;
-      width: 135px;
+      width: 100%;
+      max-width: 135px;
       background: url("./assets/Pexels-Photo-by-MART-PRODUCTION.jpg") no-repeat;
       background-size: contain;
     }
@@ -344,7 +411,26 @@ body {
   height: auto;
   display: flex;
   flex-direction: column;
-
+  &::before {
+    content: "";
+    position: absolute;
+    height: 137px;
+    width: 54px;
+    background: url("./assets/vector-wygoda.svg") no-repeat center;
+    background-size: contain;
+    left: 0;
+    top: 76.5%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: url("./assets/Vector-wygoda-right.svg") no-repeat center;
+    background-size: contain;
+    height: 137px;
+    width: 54px;
+    top: 77%;
+    right: 0;
+  }
   .main__accuracy-head {
     text-align: center;
     align-items: center;
@@ -379,15 +465,40 @@ body {
 
 .second__page {
   background-color: #ffffff;
-  margin: 0 0 20px 0;
+  margin: 0 auto 20px auto;
+
+  position: relative;
+  width: 100%;
+  max-width: 789px;
+  min-width: 50px;
   .mechanism-of-action {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 70px 15px 0 15px;
     width: 100%;
-
     background-color: #ffffff;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 137px;
+      width: 54px;
+      background: url("./assets/vector-wygoda.svg") no-repeat center;
+      background-size: contain;
+      left: 0;
+      top: 2%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: url("./assets/Vector-wygoda-right.svg") no-repeat center;
+      background-size: contain;
+      height: 137px;
+      width: 54px;
+      top: 2.5%;
+      right: 0;
+    }
     .action__head {
       text-align: center;
       color: #111111;
@@ -464,6 +575,11 @@ body {
 }
 .ingredients {
   background-color: #ffffff;
+  margin: 0 auto 20px auto;
+  position: relative;
+  width: 100%;
+  max-width: 789px;
+  min-width: 50px;
   padding: 0 15px;
 
   .ingredients__content {
@@ -471,6 +587,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 137px;
+      width: 54px;
+      background: url("./assets/vector-wygoda.svg") no-repeat center;
+      background-size: contain;
+      left: 0;
+      top: 0.5%;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: url("./assets/Vector-wygoda-right.svg") no-repeat center;
+      background-size: contain;
+      height: 137px;
+      width: 54px;
+      top: 1%;
+      right: 0;
+    }
+
     .ingredients__head {
       margin-top: 70px;
       font-size: 20px;
@@ -501,6 +638,32 @@ body {
       gap: 70px;
       list-style: none;
       li {
+        position: relative;
+
+        &:nth-of-type(2n) {
+          &::before {
+            content: "";
+            position: absolute;
+            height: 137px;
+            width: 54px;
+            background: url("./assets/vector-wygoda.svg") no-repeat center;
+            background-size: contain;
+            left: 0;
+            top: -15%;
+            transform: translateX(-33%);
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            background: url("./assets/Vector-wygoda-right.svg") no-repeat center;
+            background-size: contain;
+            height: 137px;
+            width: 54px;
+            top: -10%;
+            right: 0;
+            transform: translateX(33%);
+          }
+        }
         .benefit__item {
           display: flex;
           flex-direction: column;
@@ -508,6 +671,7 @@ body {
           text-align: center;
           justify-content: center;
           gap: 20px;
+
           .benefit__icon {
             height: 40px;
             width: 40px;
@@ -549,6 +713,12 @@ body {
 }
 
 .footer {
+  margin: 0 auto 20px auto;
+
+  position: relative;
+  width: 100%;
+  max-width: 789px;
+  min-width: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -574,11 +744,17 @@ body {
 }
 
 .products {
+  margin: 0 auto 20px auto;
+
+  position: relative;
+  width: 100%;
+  max-width: 789px;
+  min-width: 50px;
   padding-top: 126px;
   background-color: var(--background-color);
   padding-left: 15px;
   padding-right: 15px;
-  width: 100%;
+
   .products__select {
     height: 92px;
     display: flex;
