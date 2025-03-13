@@ -260,11 +260,18 @@
       <div class="footer__photo-dog"><img class="dog" src="./assets/piesek.png"></img></div>
     </div>
     <div class="products">
-      <div class="products__select">
-        <span class="select-text">liczba produktów na stronie</span>
-        <select class="select">
-          <option value="50">50</option>
-        </select>
+      <div class="custom__select-wrapper">
+        <label for="product__select" class="select-text">liczba produktów na stronie</label>
+        <div class="custom__select">
+          <select id="product-select" class="select">
+            <option value="custom">Inna liczba...</option>
+            <option value="4" selected>4</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+            
+          </select>
+          <input id="custom-input" placeholder="Podaj liczbe" min="1"/>
+        </div>
       </div>
       <div class="products__list"></div>
     </div>
