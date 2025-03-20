@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
       window.innerHeight + window.scrollY >= document.body.offsetHeight - 200 &&
       selectedValue < 100
     ) {
-      fetchProducts(currentPage);
+      fetchProducts(currentPage, selectedValue);
     }
   };
 
