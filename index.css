@@ -1,6 +1,6 @@
 :root {
   --background-color: #f1f1f1;
-  --futura-font: "Futura PT";
+  --futura-font: 'Futura PT';
 }
 html {
   scroll-behavior: smooth;
@@ -22,7 +22,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Futura PT";
+  font-family: 'Futura PT';
 }
 
 .page {
@@ -89,7 +89,7 @@ body {
 }
 
 .header__hamburger-icon {
-  background: url("./assets/Vector.png") no-repeat center;
+  background: url('./assets/Vector.png') no-repeat center;
   background-size: contain;
   width: 18px;
   height: 12px;
@@ -106,7 +106,9 @@ body {
   top: 50px;
   z-index: 600;
   transition: 0.4s ease-in-out;
-  transition: opacity 0.3s ease-in-out, visibility 0.4s;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.4s;
 }
 
 .menu--open {
@@ -145,7 +147,9 @@ body {
   padding: 0;
   pointer-events: none;
   z-index: 200;
-  transition: opacity 0.4s, visibility 0.4s;
+  transition:
+    opacity 0.4s,
+    visibility 0.4s;
 }
 .overlay--visible {
   display: block;
@@ -239,19 +243,19 @@ body {
   align-items: center;
   flex-direction: column;
   &::after {
-    content: "";
+    content: '';
     display: flex;
     position: absolute;
     height: 162px;
     width: 63px;
     left: 0;
     top: 22%;
-    background: url("./assets/vector-wygoda.svg") no-repeat center;
+    background: url('./assets/vector-wygoda.svg') no-repeat center;
     background-size: contain;
     transform: rotate(15deg) translateX(-20%);
   }
   & .hero__image {
-    background: url("./assets/header-product-photo.png") no-repeat center;
+    background: url('./assets/header-product-photo.png') no-repeat center;
     height: 368.48px;
     width: 100%;
     margin-top: 30px;
@@ -295,14 +299,14 @@ body {
   justify-content: center;
   flex-direction: column;
   &::before {
-    content: "";
+    content: '';
     display: flex;
     position: absolute;
     height: 162px;
     width: 63px;
     right: 0;
     top: 25%;
-    background: url("./assets/Vector-wygoda-right.svg") no-repeat center;
+    background: url('./assets/Vector-wygoda-right.svg') no-repeat center;
     background-size: contain;
     transform: translateX(45%) rotate(-90deg);
   }
@@ -345,7 +349,7 @@ body {
   .plant__img {
     height: 290px;
     min-height: 290px;
-    background: url("./assets/photo.png") no-repeat center;
+    background: url('./assets/photo.png') no-repeat center;
     background-size: contain;
   }
   .underline {
@@ -383,19 +387,19 @@ body {
   align-items: center;
   justify-content: center;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     height: 137px;
     width: 54px;
-    background: url("./assets/vector-wygoda.svg") no-repeat center;
+    background: url('./assets/vector-wygoda.svg') no-repeat center;
     background-size: contain;
     left: 0;
     top: 54%;
   }
   &::after {
-    content: "";
+    content: '';
     position: absolute;
-    background: url("./assets/Vector-wygoda-right.svg") no-repeat center;
+    background: url('./assets/Vector-wygoda-right.svg') no-repeat center;
     background-size: contain;
     height: 137px;
     width: 54px;
@@ -462,7 +466,7 @@ body {
       height: 290px;
       width: 100%;
       width: 135px;
-      background: url("./assets/Pexels-Photo-by-Thirdman-1.jpg") no-repeat;
+      background: url('./assets/Pexels-Photo-by-Thirdman-1.jpg') no-repeat;
       background-size: contain;
     }
     .comfort__photo2 {
@@ -470,7 +474,7 @@ body {
       height: 290px;
       width: 100%;
       max-width: 135px;
-      background: url("./assets/Pexels-Photo-by-MART-PRODUCTION.jpg") no-repeat;
+      background: url('./assets/Pexels-Photo-by-MART-PRODUCTION.jpg') no-repeat;
       background-size: contain;
     }
   }
@@ -482,19 +486,19 @@ body {
   display: flex;
   flex-direction: column;
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     height: 137px;
     width: 54px;
-    background: url("./assets/vector-wygoda.svg") no-repeat center;
+    background: url('./assets/vector-wygoda.svg') no-repeat center;
     background-size: contain;
     left: 0;
     top: 76.5%;
   }
   &::after {
-    content: "";
+    content: '';
     position: absolute;
-    background: url("./assets/Vector-wygoda-right.svg") no-repeat center;
+    background: url('./assets/Vector-wygoda-right.svg') no-repeat center;
     background-size: contain;
     height: 137px;
     width: 54px;
@@ -527,7 +531,7 @@ body {
       margin-bottom: 70px;
       height: 290px;
       width: 100%;
-      background: url("./assets/photo.jpg") no-repeat center;
+      background: url('./assets/photo.jpg') no-repeat center;
       background-size: contain;
     }
   }
@@ -640,7 +644,7 @@ body {
     display: flex;
     align-self: flex-start;
     height: 862px;
-    background: url("./assets/header-product-photo.png") no-repeat center;
+    background: url('./assets/header-product-photo.png') no-repeat center;
     width: 100%;
 
     background-size: contain;
@@ -738,19 +742,19 @@ body {
     background-color: #ffffff;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       height: 137px;
       width: 54px;
-      background: url("./assets/vector-wygoda.svg") no-repeat center;
+      background: url('./assets/vector-wygoda.svg') no-repeat center;
       background-size: contain;
       left: 0;
       top: 2%;
     }
     &::after {
-      content: "";
+      content: '';
       position: absolute;
-      background: url("./assets/Vector-wygoda-right.svg") no-repeat center;
+      background: url('./assets/Vector-wygoda-right.svg') no-repeat center;
       background-size: contain;
       height: 137px;
       width: 54px;
@@ -814,22 +818,22 @@ body {
 .ico1 {
 }
 .ico2 {
-  background-image: url("./assets/ico2.svg");
+  background-image: url('./assets/ico2.svg');
 }
 .ico3 {
-  background-image: url("./assets/ico3.svg");
+  background-image: url('./assets/ico3.svg');
 }
 .ico4 {
-  background-image: url("./assets/ico4.svg");
+  background-image: url('./assets/ico4.svg');
 }
 .ico5 {
-  background-image: url("./assets/ico5.svg");
+  background-image: url('./assets/ico5.svg');
 }
 .ico6 {
-  background-image: url("./assets/ico6.svg");
+  background-image: url('./assets/ico6.svg');
 }
 .ico7 {
-  background-image: url("./assets/ico7.svg");
+  background-image: url('./assets/ico7.svg');
 }
 .ingredients {
   display: flex;
@@ -866,19 +870,19 @@ body {
     justify-content: center;
     align-items: center;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       height: 137px;
       width: 54px;
-      background: url("./assets/vector-wygoda.svg") no-repeat center;
+      background: url('./assets/vector-wygoda.svg') no-repeat center;
       background-size: contain;
       left: 0;
       top: 0.5%;
     }
     &::after {
-      content: "";
+      content: '';
       position: absolute;
-      background: url("./assets/Vector-wygoda-right.svg") no-repeat center;
+      background: url('./assets/Vector-wygoda-right.svg') no-repeat center;
       background-size: contain;
       height: 137px;
       width: 54px;
@@ -905,20 +909,20 @@ body {
 
         &:nth-of-type(2n) {
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             height: 137px;
             width: 54px;
-            background: url("./assets/vector-wygoda.svg") no-repeat center;
+            background: url('./assets/vector-wygoda.svg') no-repeat center;
             background-size: contain;
             left: 0;
             top: -15%;
             transform: translateX(-33%);
           }
           &::after {
-            content: "";
+            content: '';
             position: absolute;
-            background: url("./assets/Vector-wygoda-right.svg") no-repeat center;
+            background: url('./assets/Vector-wygoda-right.svg') no-repeat center;
             background-size: contain;
             height: 137px;
             width: 54px;
@@ -943,25 +947,25 @@ body {
             background-position: center;
           }
           .benefit__icon1 {
-            background-image: url("./assets/ico1.svg");
+            background-image: url('./assets/ico1.svg');
           }
           .benefit__icon2 {
-            background-image: url("./assets/ico2.svg");
+            background-image: url('./assets/ico2.svg');
           }
           .benefit__icon3 {
-            background-image: url("./assets/ico3.svg");
+            background-image: url('./assets/ico3.svg');
           }
           .benefit__icon4 {
-            background-image: url("./assets/ico4.svg");
+            background-image: url('./assets/ico4.svg');
           }
           .benefit__icon5 {
-            background-image: url("./assets/ico5.svg");
+            background-image: url('./assets/ico5.svg');
           }
           .benefit__icon6 {
-            background-image: url("./assets/ico6.svg");
+            background-image: url('./assets/ico6.svg');
           }
           .benefit__icon7 {
-            background-image: url("./assets/ico7.svg");
+            background-image: url('./assets/ico7.svg');
           }
           span,
           p {
@@ -1009,7 +1013,7 @@ body {
   .ingredients__image-desktop {
     height: 1238.31px;
     width: 60%;
-    background: url("./assets/bottle__ingredients-desktop.jpg") no-repeat center;
+    background: url('./assets/bottle__ingredients-desktop.jpg') no-repeat center;
     background-size: contain;
   }
   .ingredients
@@ -1050,7 +1054,7 @@ body {
   background-color: #ffffff;
   .footer__photo-bottle {
     height: 411px;
-    background: url("./assets/bottleLast.jpg") no-repeat center;
+    background: url('./assets/bottleLast.jpg') no-repeat center;
     background-size: contain;
     width: 100%;
   }
@@ -1065,11 +1069,11 @@ body {
     position: relative;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       height: 202px;
       width: 79px;
-      background: url("./assets/Vector-piesek-leftsvg.svg") no-repeat center;
+      background: url('./assets/Vector-piesek-leftsvg.svg') no-repeat center;
       background-size: contain;
       left: 10%;
       top: 12%;
@@ -1078,9 +1082,9 @@ body {
       opacity: 1;
     }
     &::after {
-      content: "";
+      content: '';
       position: absolute;
-      background: url("./assets/Vector-piesek-right.png") no-repeat center;
+      background: url('./assets/Vector-piesek-right.png') no-repeat center;
       background-size: contain;
       height: 202px;
       width: 79px;
@@ -1154,7 +1158,7 @@ body {
       text-align: center;
     }
     .custom__select::after {
-      content: "";
+      content: '';
       position: absolute;
       display: flex;
       border-bottom: 2px solid #ffffff;
@@ -1200,7 +1204,9 @@ body {
   flex-direction: column;
   justify-content: center;
   border: 1px solid #999;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.15),
+    0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .product img {
   width: 75px;
