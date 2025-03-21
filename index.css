@@ -538,8 +538,8 @@ body {
     display: flex;
     flex-direction: column;
     padding: 0 161px;
-    width: 100%;
     max-width: 1920px;
+    width: 100%;
   }
   .main {
     display: flex;
@@ -564,20 +564,22 @@ body {
     gap: 0;
   }
   .main .main__article-plant *,
-  .main .main__article-plant .main__plant,
+  .main .main__article-plant .main__plant *,
   .main .main__accuracy * {
     justify-content: center;
   }
 
   .main__plant .underline,
   .main__accuracy .underline {
-    width: 360px;
+    max-width: 360px;
     margin-top: 24px;
   }
-  .main__plant .plant__img,
-  .main__comfort .main__comfort-photos,
+  .main__article-plant .main__plant .plant__img,
+  .main__comfort .main__comfort-photos span,
   .main__accuracy .main__accuracy-article .injection-img {
-    width: 360px;
+    display: flex;
+    border-radius: 8px;
+    max-width: 360px;
     height: 290px;
     margin-top: 50px;
     background-size: 100% 100%;
@@ -586,13 +588,13 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 0;
-    width: 360px;
+
+    max-width: 360px;
     height: 294px;
     margin-bottom: 0;
   }
   .main__comfort .main__comfort-photos .comfort__photo2,
   .main__comfort .main__comfort-photos .comfort__photo1 {
-    width: 170px;
     max-width: 170px;
     background-size: 100% 100%;
   }
@@ -655,6 +657,10 @@ body {
     font-weight: 700;
     color: #f6f6f6;
     background-color: #30ab4c;
+  }
+  .main__plant .plant__img,
+  .main__plant .underline {
+    display: block;
   }
   .main__plant .article-plant-description {
     font-size: 20px;
@@ -826,6 +832,8 @@ body {
   background-image: url("./assets/ico7.svg");
 }
 .ingredients {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
   margin: 0 auto 20px auto;
   position: relative;
@@ -833,7 +841,25 @@ body {
   max-width: 789px;
   min-width: 50px;
   padding: 0 15px;
-
+  .ingredients__head {
+    margin-top: 70px;
+    font-size: 20px;
+    font-weight: 450;
+    text-align: center;
+  }
+  .underline {
+    margin: 30px auto 0;
+    width: 140px;
+    height: 1px;
+    background-color: #111111;
+    margin-top: 30px;
+  }
+  .benefits {
+    margin-top: 70px;
+    font-size: 13px;
+    font-weight: 450;
+    text-align: center;
+  }
   .ingredients__content {
     display: flex;
     flex-direction: column;
@@ -860,23 +886,8 @@ body {
       right: 0;
     }
 
-    .ingredients__head {
-      margin-top: 70px;
-      font-size: 20px;
-      font-weight: 450;
-      text-align: center;
-    }
-    .underline {
-      width: 140px;
-      height: 1px;
-      background-color: #111111;
-      margin-top: 30px;
-    }
-    .benefits {
-      margin-top: 70px;
-      font-size: 13px;
-      font-weight: 450;
-      text-align: center;
+    .ingredients__content-desktop {
+      display: none;
     }
     .ingredients__benefits-list {
       width: 100%;
@@ -963,7 +974,68 @@ body {
     }
   }
 }
-
+@media screen and (min-width: 769px) {
+  .second__page {
+    display: none;
+  }
+  .ingredients {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 161px;
+    width: 100%;
+    max-width: none;
+  }
+  .ingredients__content-desktop .benefit__icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+  }
+  .ingredients .ingredients__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .ingredients .ingredients__content .ingredients__benefits-list {
+    display: none;
+  }
+  .ingredients .ingredients__content .ingredients__content-desktop {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    gap: 14px;
+  }
+  .ingredients__image-desktop {
+    height: 1238.31px;
+    width: 60%;
+    background: url("./assets/bottle__ingredients-desktop.jpg") no-repeat center;
+    background-size: contain;
+  }
+  .ingredients
+    .ingredients__content
+    .ingredients__content-desktop
+    .benefit__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 417px;
+  }
+  .benefit-item-head {
+    font-size: 31px;
+    font-weight: 450;
+    color: #111111;
+  }
+  .benefit__item-amount,
+  .benefit__item-description {
+    font-size: 20px;
+    font-weight: 400;
+    color: #111111;
+  }
+}
 .footer {
   margin: 0 auto 20px auto;
 
