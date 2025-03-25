@@ -973,6 +973,20 @@ body {
     align-items: stretch;
     justify-content: space-between;
   }
+  .hero__container::after,
+  .main::before,
+  .main__comfort::before,
+  .main__comfort::after,
+  .main__accuracy::before,
+  .main__accuracy::after,
+  .second__page .mechanism-of-action::before,
+  .second__page .mechanism-of-action::after,
+  .ingredients__content::before,
+  .ingredients__content::after,
+  .ingredients__benefits-list li:before,
+  .ingredients__benefits-list li:after {
+    display: none;
+  }
   .main section {
     margin: 0;
   }
@@ -1153,6 +1167,15 @@ body {
     width: 100%;
     max-width: none;
   }
+  .ingredients .ingredients__head {
+    display: inline-block;
+    font-size: 48px;
+    font-weight: 450;
+    background: linear-gradient(to right, #111111, #b1b1b1, #696969, #b1b1b1);
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
   .ingredients__content-desktop .benefit__icon {
     width: 70px;
     height: 70px;
@@ -1173,15 +1196,37 @@ body {
     list-style-type: none;
     gap: 14px;
   }
-  .ingredients__image-desktop {
+  .bottle-wrapper {
     display: flex;
-    align-items: flex-end;
+    width: 60%;
+    max-width: 540px;
+    flex-direction: column;
     justify-content: center;
-    height: 1238.31px;
-    width: 100%;
-    background: url('./assets/bottle__ingredients-desktop.jpg') no-repeat center;
-    background-size: contain;
+    align-items: center;
     position: relative;
+  }
+  .ingredients__image-desktop {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .ingredients__image-desktop-vector {
+    content: '';
+    position: absolute;
+    height: 31%;
+  }
+  .vector--right {
+    top: 25%;
+    left: 70%;
+    z-index: 1;
+  }
+  .vector--left {
+    top: 39%;
+    left: -6%;
+    z-index: 1;
+    transform: rotate(39deg);
   }
   .ingredients
     .ingredients__content
@@ -1195,6 +1240,10 @@ body {
     gap: 20px;
     max-width: 417px;
   }
+  .ingredients .benefits {
+    font-size: 31px;
+    font-weight: 450;
+  }
   .benefit-item-head {
     font-size: 31px;
     font-weight: 450;
@@ -1206,25 +1255,20 @@ body {
     font-weight: 400;
     color: #111111;
   }
-  .bottle {
-    display: flex;
-    width: 60%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+
   .button__buy {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px 40px;
     color: #f6f6f6;
-    font-size: 20;
+    font-size: 20px;
     font-weight: 700;
     background-color: #ad4844;
     border: none;
     position: absolute;
-    transform: translateY(-200%);
+    z-index: 13;
+    bottom: 6%;
   }
   .dog__desktop {
     display: block;
