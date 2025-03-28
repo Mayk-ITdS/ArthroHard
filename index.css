@@ -1,6 +1,7 @@
 :root {
   --background-color: #f1f1f1;
   --futura-font: 'Futura PT';
+  --arrow-position: 55%;
 }
 html {
   scroll-behavior: smooth;
@@ -17,14 +18,12 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Futura PT';
 }
-
 .page {
   margin: 0 auto;
   min-height: 100vh;
@@ -38,7 +37,6 @@ body {
   position: relative;
   padding: 0 15px;
 }
-
 .header {
   margin: 0 auto;
   width: 100%;
@@ -208,6 +206,7 @@ body {
     text-align: center;
     .hero__text-large {
       background: linear-gradient(to right, #111111, #b1b1b1);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       margin-bottom: 20px;
@@ -254,6 +253,7 @@ body {
   font-size: 20px;
   position: relative;
   background: linear-gradient(to right, #111111, #b1b1b1, #696969, #b1b1b1);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -730,7 +730,6 @@ body {
 }
 .footer {
   margin: 0 auto 20px auto;
-
   position: relative;
   width: 100%;
   max-width: 789px;
@@ -789,7 +788,6 @@ body {
     }
   }
 }
-
 .products {
   margin: 0 auto 20px auto;
   position: relative;
@@ -807,6 +805,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    position: relative;
     .select-text {
       text-align: center;
       padding: 10px;
@@ -842,6 +841,10 @@ body {
     .custom__select input {
       display: none;
       text-align: center;
+    }
+    .custom__select input::placeholder {
+      color: #999;
+      font-size: 13px;
     }
     .custom__select::after {
       content: '';
@@ -1184,7 +1187,6 @@ body {
     height: 862px;
     background: url('./assets/two-bottles-desktop.png') no-repeat center;
     width: 100%;
-
     background-size: contain;
   }
   .btn__kup-teraz {
@@ -1279,6 +1281,7 @@ body {
     font-weight: 450;
     background: linear-gradient(to right, #111111, #b1b1b1, #696969, #b1b1b1);
     color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -1399,7 +1402,7 @@ body {
     box-sizing: border-box;
     flex-direction: row;
     height: 46px;
-    width: 30%;
+    width: 56%;
   }
   .products .custom__select-wrapper .select-text {
     height: 46px;
@@ -1409,13 +1412,22 @@ body {
     background-color: transparent;
   }
   .products .custom__select-wrapper .custom__select {
+    flex-direction: row;
     width: 35%;
     border: none;
   }
-  #custom-input,
-  #product-select {
-    border: none;
+
+  .products .custom__select-wrapper .custom__select select.custom--active,
+  .products .custom__select-wrapper .custom__select.custom--active::after {
+    display: none;
+  }
+  .products .custom__select-wrapper .custom__select.custom--active input {
+    display: block;
+  }
+  .products .custom__select-wrapper .custom__select select,
+  .products .custom__select-wrapper .custom__select input {
     height: 46px;
+    border: none;
   }
   .product {
     width: 100%;
